@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <!--
     If you are serving your web app in a path other than the root, change the
@@ -18,6 +19,7 @@
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="A new Flutter project.">
 
   <!-- iOS meta tags & icons -->
@@ -27,12 +29,30 @@
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png"/>
+  <link rel="icon" type="image/png" href="favicon.png" />
 
   <title>rpgs4museums_lp</title>
   <link rel="manifest" href="manifest.json">
+  <script>
+    // Fix for Opera and other browsers
+    window.addEventListener('error', function (e) {
+      console.error('Global error:', e.error);
+    });
+
+    // Polyfill for older browsers
+    if (!window.Promise) {
+      console.error('Browser does not support Promises');
+    }
+  </script>
 </head>
+
 <body>
+  <script>
+    window.addEventListener('load', function (ev) {
+      _flutter.loader.load();
+    });
+  </script>
   <script src="flutter_bootstrap.js" async></script>
 </body>
+
 </html>
